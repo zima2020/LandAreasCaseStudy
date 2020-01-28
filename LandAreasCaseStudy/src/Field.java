@@ -24,7 +24,7 @@ public class Field {
 		}
 	}
 
-	// Traverse the entire area of the rectangle, and mark it 1 for barren.
+	// traverse the entire area of the rectangle, and mark it 1 for barren.
 	public void setBarren(Point lowerLeft, Point upperRight) {
 		for (int i = lowerLeft.x; i <= upperRight.x; i++) {
 			for (int j = lowerLeft.y; j <= upperRight.y; j++) {

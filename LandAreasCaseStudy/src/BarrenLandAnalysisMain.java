@@ -6,16 +6,16 @@ import java.util.Arrays;
 
 public class BarrenLandAnalysisMain {
 
-	// Global Field object.
+	// Initializing Field object
 	private static Field myField = new Field();
 
 	public static void main(String[] args) throws IOException {
 
-		// Create and initialize the field
+		// set all nodes to 0
 		myField.zeroMatrix();
 
 		// Parse user input
-		System.out.println("Please enter a set of four numbers, or enter 'q' to exit: ");
+		System.out.println("Please enter a set/sets of four numbers, or enter 'q' to exit: ");
 		readInput();
 
 		// Calculate non-barren land sections
@@ -27,7 +27,7 @@ public class BarrenLandAnalysisMain {
 		System.exit(0);
 	}
 
-	// makes sure input coordinates are within the field x y range
+	// makes sure input coordinates are within given range
 	public static void assertRange(Field land, String[] coordinates) {
 
 		if ((new Integer(coordinates[0]) >= Field.xLimit) || new Integer(coordinates[2]) >= Field.xLimit) {
@@ -69,6 +69,7 @@ public class BarrenLandAnalysisMain {
 
 				System.out.println("ERROR: " + Arrays.toString(numbers) + " needs to have exactly 4 numbers." + '\n'
 						+ "Enter in a valid set of numbers, or enter 'q' to exit.");
+				System.exit(0);
 
 			}
 
